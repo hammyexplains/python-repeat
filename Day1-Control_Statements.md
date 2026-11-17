@@ -811,7 +811,24 @@ appropriate and `break`.
 **Python Code:**
 
 ```
-total_classes = int(input("Enter total number of classes: "))attended_classes = int(input("Enter number of classes attended: "))if attended_classes > total_classes or total_classes <= 0:    print("Invalid Data")else:    attendance = (attended_classes / total_classes) * 100    print(f"Attendance Percentage: {attendance:.2f}%")    if attendance >= 75:        print("Student is eligible for examinations")    else:        shortage = 75 - attendance        print("Student is not eligible")        print(f"Attendance shortage: {shortage:.2f}%")
+total_classes = int(input("Enter total number of classes: "))
+attended_classes = int(input("Enter number of classes attended: "))
+
+if attended_classes > total_classes or total_classes <= 0:
+    print("Invalid Data")
+
+else:
+    attendance = (attended_classes / total_classes) * 100
+
+    print(f"Attendance Percentage: {attendance:.2f}%")
+
+    if attendance >= 75:
+        print("Student is eligible for examinations")
+
+    else:
+        shortage = 75 - attendance
+        print("Student is not eligible")
+        print(f"Attendance shortage: {shortage:.2f}%")
 ```
 
 **Sample Output:**
@@ -851,7 +868,32 @@ Student is eligible for examinations
 **Python Code:**
 
 ```
-correct_username = "admin"correct_password = "python123"attempts = 0max_attempts = 3while attempts < max_attempts:    username = input("Enter username: ")    password = input("Enter password: ")    if username == correct_username and password == correct_password:        print("Login Successful!")        break    else:        attempts += 1        remaining = max_attempts - attempts        if remaining > 0:            print("Invalid username or password")            print(f"Attempts remaining: {remaining}")        else:            print("Account Locked!")
+correct_username = "admin"
+correct_password = "python123"
+
+attempts = 0
+max_attempts = 3
+
+while attempts < max_attempts:
+
+    username = input("Enter username: ")
+    password = input("Enter password: ")
+
+    if username == correct_username and password == correct_password:
+        print("Login Successful!")
+        break
+
+    else:
+        attempts += 1
+
+        remaining = max_attempts - attempts
+
+        if remaining > 0:
+            print("Invalid username or password")
+            print(f"Attempts remaining: {remaining}")
+
+        else:
+            print("Account Locked!")
 ```
 
 **Sample Output:**
